@@ -1,0 +1,78 @@
+name: Bug Fix
+description: Report a bug or unexpected behavior to be fixed
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: Login API returns 500 error or UI behaves strange
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Frontend
+        - Backend
+        - API
+        - Database
+        - Infrastructure
+        - Authentication
+        - Payment
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_behavior
+    attributes:
+      label: Current Behavior
+      placeholder: Describe the current issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      placeholder: Describe the expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Open login page
+        2. Submit valid credential
+        3. Observe 500 response
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: Production / Staging / Local
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or Screenshot
+      placeholder: Paste logs or attach screenshots

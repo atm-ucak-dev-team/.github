@@ -1,0 +1,75 @@
+name: Testing
+description: Testing task for frontend or backend implementation
+title: "[TEST] "
+labels: ["testing"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: Verify login flow with OAuth provider
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Testing Scope
+      options:
+        - Frontend
+        - Backend
+        - API
+        - Database
+        - Integration
+        - End-to-End
+    validations:
+      required: true
+
+  - type: dropdown
+    id: test_type
+    attributes:
+      label: Test Type
+      options:
+        - Manual Testing
+        - Unit Test
+        - Integration Test
+    validations:
+      required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      placeholder: Describe what needs to be validated
+    validations:
+      required: true
+
+  - type: textarea
+    id: test_scenarios
+    attributes:
+      label: Test Scenarios
+      placeholder: |
+        - Login with valid credential
+        - Login with invalid password
+        - Session expiration handling
+        - OAuth callback validation
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      placeholder: |
+        - All test scenarios passed
+        - No console error
+        - API response validated
+        - No regression detected
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      placeholder: Logs, edge cases, limitations, or references

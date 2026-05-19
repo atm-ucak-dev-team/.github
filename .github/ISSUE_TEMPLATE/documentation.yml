@@ -1,0 +1,60 @@
+name: Documentation
+description: Documentation creation or update
+title: "[DOCS] "
+labels: ["documentation"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: Update payment callback integration guide
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Documentation Type
+      options:
+        - API Documentation
+        - Runbook
+        - Setup Guide
+        - Architecture
+        - Troubleshooting
+        - README
+        - Changelog
+    validations:
+      required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      placeholder: Explain why this documentation is needed
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      placeholder: Describe what should be documented
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      placeholder: |
+        - Example request/response included
+        - Steps validated on staging
+        - Screenshots updated
+    validations:
+      required: true
+
+  - type: input
+    id: reference
+    attributes:
+      label: Reference
+      placeholder: Existing docs / URL / RFC

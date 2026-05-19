@@ -1,0 +1,66 @@
+name: Backend Enhancement
+description: Backend improvement or new feature
+title: "[BE] "
+labels: ["backend"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: Add retry mechanism for payment callback
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Enhancement Type
+      options:
+        - API
+        - Service
+        - Worker
+        - Queue
+        - Database
+        - Performance
+        - Refactor
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      placeholder: Describe the current limitation/problem
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed Solution
+      placeholder: Describe the proposed implementation
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      placeholder: |
+        - Retry max 3 times
+        - Exponential backoff applied
+        - Metrics available in Prometheus
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact Analysis
+      placeholder: Services, DB, infra, or API impact
+
+  - type: input
+    id: reference
+    attributes:
+      label: Reference
+      placeholder: RFC / Diagram / Documentation / URL

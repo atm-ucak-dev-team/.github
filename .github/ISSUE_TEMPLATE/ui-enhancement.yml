@@ -19,8 +19,8 @@ body:
         - Component
         - Screen
         - Layout
-        - Design System
-        - Responsive
+        - Color
+        - Test
     validations:
       required: true
 

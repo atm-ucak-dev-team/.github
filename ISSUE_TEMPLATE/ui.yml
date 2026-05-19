@@ -1,0 +1,50 @@
+name: UI
+description: Components or screen implementation/update
+title: "[UI] "
+labels: ["ui"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: Create login page UI
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: UI Type
+      options:
+        - Component
+        - Screen
+        - Layout
+        - Design System
+        - Responsive
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirement
+    attributes:
+      label: Requirement
+      placeholder: Describe the UI requirement
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      placeholder: |
+        - Match Figma design
+        - Responsive on mobile
+        - Dark mode supported
+    validations:
+      required: true
+
+  - type: input
+    id: reference
+    attributes:
+      label: Design Reference
+      placeholder: Figma / Screenshot / URL

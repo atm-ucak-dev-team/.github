@@ -43,7 +43,7 @@ body:
     validations:
       required: true
 
-  - type: input
+  - type: textarea
     id: reference
     attributes:
       label: Design Reference
